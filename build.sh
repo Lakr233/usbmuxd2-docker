@@ -44,7 +44,9 @@ function build_avahi() {
     ./configure --prefix=$BUILD_PREFIX \
         --disable-gtk --disable-gtk3 \
         --disable-mono --disable-qt5 \
-        --disable-python
+        --disable-python \
+        --with-avahi-user=root \
+        --with-avahi-group=root
     make -j$(nproc)
     make install
 }
