@@ -30,6 +30,7 @@ REQUIRED_PACKAGE=(
     "expat"
     "dbus"
     "wget"
+    "nss-mdns"
 )
 if ! [ -x "$(command -v apt)" ]; then
     echo "apt is not installed, please install apt first"
