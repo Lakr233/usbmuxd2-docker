@@ -1,0 +1,9 @@
+build/
+output/
+source/
+
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
