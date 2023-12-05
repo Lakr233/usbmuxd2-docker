@@ -3,3 +3,5 @@ version: "3.8"
 services:
   test:
     build: .
+    volumes:
+      - /var/run/dbus/:/var/run/dbus/
