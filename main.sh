@@ -3,7 +3,7 @@
 cd $(dirname $0)
 
 echo "[*] starting avahi-daemon..."
-./sbin/avahi-daemon --no-rlimits --no-drop-root &
+./sbin/avahi-daemon -s --no-rlimits --no-drop-root &
 sleep 3
 
 echo "[*] starting usbmuxd..."
