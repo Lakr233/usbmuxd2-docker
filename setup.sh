@@ -13,7 +13,7 @@ REQUIRED_PACKAGE=(
     "libtool-bin"
     "libudev-dev"
     "libusb-dev"
-    "libusb-1.0-dev"
+    "libusb-1.0-0-dev"
     "libxml2-dev"
     "libevent-dev"
     "libssl-dev"
