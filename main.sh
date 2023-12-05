@@ -1,12 +1,19 @@
 #!/bin/bash
 
 cd $(dirname $0)
-./sbin/usbmuxd --debug --allow-heartless-wifi &
 
+echo "[*] starting avahi-daemon..."
+./sbin/avahi-daemon --no-rlimits --no-drop-root &
+sleep 3
+
+echo "[*] starting usbmuxd..."
+./sbin/usbmuxd --debug --allow-heartless-wifi &
+sleep 3
+
+echo "[*] waiting for any device..."
 while true; do
-    echo "[*] waiting for any device..."
-    ./bin/idevice_id -n || true
     sleep 3
+    echo "[*] checking devices..."
+    ./bin/idevice_id -n || true
 done
 
-echo "[*] test done"
